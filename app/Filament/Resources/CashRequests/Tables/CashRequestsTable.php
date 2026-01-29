@@ -33,6 +33,7 @@ class CashRequestsTable
 
                 TextColumn::make('requesting_amount')
                     ->label('Requesting Amount')
+                    ->money('PHP')
                     ->numeric()
                     ->sortable(),
 
