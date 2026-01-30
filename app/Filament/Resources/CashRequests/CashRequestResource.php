@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Filament\Resources\CashRequests;
 
 use App\Filament\Resources\CashRequests\Pages\CreateCashRequest;
@@ -40,9 +39,9 @@ class CashRequestResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListCashRequests::route('/'),
+            'index'  => ListCashRequests::route('/'),
             'create' => CreateCashRequest::route('/create'),
-            'edit' => EditCashRequest::route('/{record}/edit'),
+            'edit'   => EditCashRequest::route('/{record}/edit'),
         ];
     }
 }

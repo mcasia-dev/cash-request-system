@@ -29,6 +29,7 @@ class Register extends BaseRegister
                 $this->getLastNameFormComponent(),
                 $this->getEmailFormComponent(),
                 $this->getDepartmentFormComponent(),
+                $this->getDepartmentHeadFormComponent(),
                 $this->getPhoneFormComponent(),
                 $this->getPositionFormComponent(),
                 $this->getPasswordFormComponent(),

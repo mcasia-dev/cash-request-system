@@ -1,11 +1,13 @@
 <?php
 namespace App\Filament\Resources\CashRequests\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
 
 class CashRequestsTable
 {
@@ -43,6 +45,7 @@ class CashRequestsTable
                     ->sortable(),
 
                 TextColumn::make('status')
+                    ->badge()
                     ->searchable(),
 
                 TextColumn::make('created_at')
@@ -59,6 +62,7 @@ class CashRequestsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make()->visible(fn ($record) => $record->status === 'pending'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
