@@ -9,10 +9,7 @@ description: >-
 
 # Inertia Vue Development
 
-
-
 ## When to Apply
-
 
 Activate this skill when:
 
@@ -22,28 +19,19 @@ Activate this skill when:
 - Using v2 features: deferred props, prefetching, or polling
 - Building Vue-specific features with the Inertia protocol
 
-
 ## Documentation
-
 
 Use `search-docs` for detailed Inertia v2 Vue patterns and documentation.
 
-
 ## Basic Usage
-
-
 
 ### Page Components Location
 
-
 Vue page components should be placed in the `resources/js/Pages` directory.
-
 
 ### Page Component Structure
 
-
 Important: Vue components must have a single root element.
-
 
 <code-snippet name="Basic Vue Page Component" lang="vue">
 
@@ -66,16 +54,9 @@ defineProps({
 
 </code-snippet>
 
-
-
-
-
 ## Client-Side Navigation
 
-
-
 ### Basic Link Component
-
 
 Use `<Link>` for client-side navigation instead of traditional `<a>` tags:
 
@@ -95,11 +76,7 @@ import { Link } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
 ### Link with Method
-
 
 <code-snippet name="Link with POST Method" lang="vue">
 
@@ -115,11 +92,7 @@ import { Link } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
 ### Prefetching
-
 
 Prefetch pages to improve perceived performance:
 
@@ -137,11 +110,7 @@ import { Link } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
 ### Programmatic Navigation
-
 
 <code-snippet name="Router Visit" lang="vue">
 
@@ -169,18 +138,11 @@ function createUser() {
 
 </code-snippet>
 
-
-
-
 ## Form Handling
-
-
 
 ### Form Component (Recommended)
 
-
 The recommended way to build forms is with the `<Form>` component:
-
 
 <code-snippet name="Form Component Example" lang="vue">
 
@@ -206,13 +168,7 @@ import { Form } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
-
 ### Form Component With All Props
-
-
 
 <code-snippet name="Form Component Full Example" lang="vue">
 
@@ -257,12 +213,7 @@ import { Form } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
-
 ### Form Component Reset Props
-
 
 The `<Form>` component supports automatic resetting:
 
@@ -271,7 +222,6 @@ The `<Form>` component supports automatic resetting:
 - `setDefaultsOnSuccess` - Update default values on success
 
 Use the `search-docs` tool with a query of `form component resetting` for detailed guidance.
-
 
 <code-snippet name="Form with Reset Props" lang="vue">
 
@@ -298,18 +248,11 @@ import { Form } from '@inertiajs/vue3'
 
 </code-snippet>
 
-
-
-
 Forms can also be built using the `useForm` composable for more programmatic control. Use the `search-docs` tool with a query of `useForm helper` for guidance.
-
-
 
 ### `useForm` Composable
 
-
 For more programmatic control or to follow existing conventions, use the `useForm` composable:
-
 
 <code-snippet name="useForm Composable Example" lang="vue">
 
@@ -348,19 +291,11 @@ function submit() {
 
 </code-snippet>
 
-
-
-
-
 ## Inertia v2 Features
-
-
 
 ### Deferred Props
 
-
 Use deferred props to load data after initial page render:
-
 
 <code-snippet name="Deferred Props with Empty State" lang="vue">
 
@@ -387,15 +322,9 @@ defineProps({
 
 </code-snippet>
 
-
-
-
-
 ### Polling
 
-
 Automatically refresh data at intervals:
-
 
 <code-snippet name="Polling Example" lang="vue">
 
@@ -429,15 +358,9 @@ onUnmounted(() => {
 
 </code-snippet>
 
-
-
-
-
 ### WhenVisible (Infinite Scroll)
 
-
 Load more data when user scrolls to a specific element:
-
 
 <code-snippet name="Infinite Scroll with WhenVisible" lang="vue">
 
@@ -469,18 +392,11 @@ defineProps({
 
 </code-snippet>
 
-
-
-
-
 ## Server-Side Patterns
-
 
 Server-side patterns (Inertia::render, props, middleware) are covered in inertia-laravel guidelines.
 
-
 ## Common Pitfalls
-
 
 - Using traditional `<a>` links instead of Inertia's `<Link>` component (breaks SPA behavior)
 - Forgetting that Vue components must have a single root element
